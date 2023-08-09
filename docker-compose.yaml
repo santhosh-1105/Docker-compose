@@ -9,16 +9,16 @@ services:
     - MYSQL_ROOT_PASSWORD=wordpress
     - MYSQL_DATABASE=wordpress
     - MYSQL_USER=wordpress
-    - MYSQL_PASSWORD=santhu
+    - MYSQL_PASSWORD=john
   wordpress:
    image: wordpress:latest
-   ports: 
+   ports:
     - 80:80
    restart: always
    environment:
-    - WORDPRESS_DB_HOST=db
-    - WORDPRESS_DB_USER=wordpress
-    - WORDPRESS_DB_PASSWORD=santhu
-    - WORDPRESS_DB_NAME=wordpress
+     - WORDPRESS_DB_HOST=db
+     - WORDPRESS_DB_USER=wordpress
+     - WORDPRESS_DB_PASSWORD=john
+     - WORDPRESS_DB_NAME=wordpress
 volumes:
-  db_data:
+  db_data:
